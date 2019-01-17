@@ -32,9 +32,11 @@ int main() {
 	cout << setw(21) << left << "Product: " << product << "\n";
 	cout << setw(21) << left << "Int Quotient: " << lossyQuotient << "\n";
 	cout << setw(21) << left << "Quotient: " << quotient << "\n";
-	
 
-	system("pause");
+	//replaces system("pause") since this is Windows specific and generally bad practice
+	cin.ignore();
+	cin.get();
+
 	return 0;
 
 
