@@ -17,6 +17,7 @@ using namespace std;
 void pumpGas(double totalGallons){
     cout << endl << "Pumping gas..." << endl;
     //use int and multiply total by two instead of double because floating points in for loops is bad practice
+    // (to elaborate, they aren't an exact representation of a number such as 1.5, it'll be like 1.50000000009
     for (int x = 1; x < totalGallons * 2; x += 1 ){
         if (x % 2 == 0) {
             cout << x / 2.00 << " gallons pumped..." << endl;
