@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// CS215-005 LAB 1 005
+// CS215-005 PROJECT 1 005
 //--------------------------------------------------------------------
 // Author: Cole Gerdemann
 // Date: January 29th 2019
@@ -9,30 +9,31 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include <string>
 #include <zconf.h> //import this for device agnostic sleep
 //#include <windows.h> //import this if using Windows only
 
 using namespace std;
 
-void pumpGas(double totalGallons){
+void pumpGas(double totalGallons) {
     cout << endl << "Pumping gas..." << endl;
     //use int and multiply total by two instead of double because floating points in for loops is bad practice
     // (to elaborate, they aren't an exact representation of a number such as 1.5, it'll be like 1.50000000009
-    for (int x = 1; x < totalGallons * 2; x += 1 ){
+    for (int x = 1; x < totalGallons * 2; x += 1) {
         if (x % 2 == 0) {
             cout << x / 2.00 << " gallons pumped..." << endl;
         } else {
             cout << x - (x / 2.00) << " gallons pumped..." << endl;
         }
         sleep(2); //use this on any device
-        //sleep(2000); //use this on Windows only
+        //Sleep(2000); //use this on Windows only
     }
     cout << totalGallons << " gallons pumped..." << endl;
 }
 
-void printReceipt(char octane, double price, double gallons){
+void printReceipt(char octane, double price, double gallons) {
     string octaneFull;
-    switch (octane){
+    switch (octane) {
         case 'l': {
             octaneFull = "Low";
             break;
@@ -58,7 +59,7 @@ void printReceipt(char octane, double price, double gallons){
     cout << "----------------------------------" << endl;
 }
 
-double getGallonsToPump(double selectedOctaneLevels){
+double getGallonsToPump(double selectedOctaneLevels) {
     double gallonsToPump;
     cout << endl << "Enter number of gallons (-1 to fill it up): ";
     cin >> gallonsToPump;
@@ -76,7 +77,7 @@ double getGallonsToPump(double selectedOctaneLevels){
     return gallonsToPump;
 }
 
-char getOctane(){
+char getOctane() {
     cout << endl;
     do {
         string input;
@@ -92,16 +93,16 @@ char getOctane(){
     } while (true);
 }
 
-void printPumpLevels(double highOctaneLevels, double mediumOctaneLevels, double lowOctaneLevels){
+void printPumpLevels(double highOctaneLevels, double mediumOctaneLevels, double lowOctaneLevels) {
     cout << setw(15) << left << "Tank Readings:";
     cout << setw(5) << right << "Hi=" << fixed << setprecision(2) << setw(6) << right << highOctaneLevels;
     cout << setw(6) << right << "Med=" << fixed << setprecision(2) << setw(6) << right << mediumOctaneLevels;
     cout << setw(6) << right << "Low=" << fixed << setprecision(2) << setw(6) << right << lowOctaneLevels << endl;
 }
 
-void printPumpPrices(double highOctanePrice, double mediumOctanePrice, double lowOctanePrice, bool startup){
+void printPumpPrices(double highOctanePrice, double mediumOctanePrice, double lowOctanePrice, bool startup) {
     // print gas prices
-    if (startup){
+    if (startup) {
         cout << setw(15) << left << "Today's PPG:";
         cout << setw(6) << right << "Hi=$" << fixed << setprecision(2) << setw(5) << right << highOctanePrice;
         cout << setw(7) << right << "Med=$" << fixed << setprecision(2) << setw(5) << right << mediumOctanePrice;
@@ -114,13 +115,13 @@ void printPumpPrices(double highOctanePrice, double mediumOctanePrice, double lo
     }
 }
 
-char getRewardsStatus(){
+char getRewardsStatus() {
     do {
         cout << setw(35) << left << "Are you a rewards customer? (Y/N): ";
         string input;
         cin >> input;
         cin.clear();
-        if (input == "shutdown"){
+        if (input == "shutdown") {
             return 's';
         } else if (input.length() == 1 && tolower(input[0]) == 'y') {
             return 'y';
@@ -144,19 +145,14 @@ int main() {
 
     ifstream gasLevelsInput("pumpin.txt");
     if (gasLevelsInput.is_open()) {
-        for (string line; getline(gasLevelsInput, line);) {
-            istringstream iss(line);
-            // check if code has read the first line yet or should read the second
-            if (highOctaneLevels == -1) {
-                iss >> highOctaneLevels;
-                iss >> mediumOctaneLevels;
-                iss >> lowOctaneLevels;
-            } else {
-                iss >> highOctanePrice;
-                iss >> mediumOctanePrice;
-                iss >> lowOctanePrice;
-            }
-        }
+        gasLevelsInput >> highOctaneLevels;
+        gasLevelsInput >> mediumOctaneLevels;
+        gasLevelsInput >> lowOctaneLevels;
+
+        gasLevelsInput >> highOctanePrice;
+        gasLevelsInput >> mediumOctanePrice;
+        gasLevelsInput >> lowOctanePrice;
+
         gasLevelsInput.close();
     } else {
         cout << "Unable to read input file." << endl;
@@ -185,7 +181,7 @@ int main() {
         cout << endl << " ------ Cole Gerdemann's Gas -----" << endl;
 
         // find out if customer is a rewards member
-        switch (getRewardsStatus()){
+        switch (getRewardsStatus()) {
             case 'y': {
                 rewardsMember = true;
                 break;
