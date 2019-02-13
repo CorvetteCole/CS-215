@@ -16,8 +16,11 @@ using namespace std;
 int main() {
 
     ifstream dataInput("tempsin.txt");
-    ofstream dataOutput("tempsout.txt");
+
     if (dataInput.is_open()) {
+
+        // creates tempsout file and prints header
+        ofstream dataOutput("tempsout.txt");
         dataOutput << setw(15) << left << "DATE";
         dataOutput << setw(6) << left << "HIGH";
         dataOutput << setw(6) << left << "LOW" << endl;
@@ -25,13 +28,19 @@ int main() {
 
         string input;
         dataInput >> input;
+
+        int minTemp;
+        int maxTemp;
+
+        // reads input while the endofdata hasn't been reached
         while (input != "ENDOFDATA"){
             int numDays;
             dataInput >> numDays;
 
-            int minTemp = 2147483647;
-            int maxTemp = -2147483647;
+            minTemp = 2147483647;
+            maxTemp = -2147483647;
 
+            // find min and max temps
             for (int i = 0; i < numDays; i++){
                 int temp;
                 dataInput >> temp;
@@ -42,13 +51,16 @@ int main() {
                 }
             }
 
+            // output temps and date
             dataOutput << setw(15) << left << input;
             dataOutput << setw(6) << left << maxTemp;
             dataOutput << setw(6) << left << minTemp << endl;
+
+            // get next input for loop
             dataInput >> input;
         }
 
-
+        // close files
         dataOutput.close();
         dataInput.close();
     } else {
