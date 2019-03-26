@@ -1,101 +1,106 @@
-//--------------------------------------------------------------------
-// CS215-005 LAB 1 005 
-//--------------------------------------------------------------------
-// Author: Cole Gerdemann
-// Date: January 23rd 2019
-// Description:  a program that asks the user to enter 3 numbers, one at a time. Prints the three numbers
-// in sorted order then shows a menu of peppers. 
-//--------------------------------------------------------------------
 #include <iostream>
-#include <iomanip>
+
 using namespace std;
 
-int main(){
-	int num1;
-	int num2;
-	int num3;
+const int maxFractions = 10;
 
-	cout << "Enter number 1: ";
-	cin >> num1;
-	cout << endl << "Enter number 2: ";
-	cin >> num2;
-	cout << endl << "Enter number 3: ";
-	cin >> num3;
+struct fraction {
+	int numerator;
+	int denominator;
+	double decimalValue;
+};
 
-	int largest;
-	int middle;
-	int smallest;
-
-	// sort numbers
-	if (num1 > num2 && num1 > num3) {
-		largest = num1;
-		if (num3 < num2) {
-			smallest = num3;
-			middle = num2;
-		} else {
-			smallest = num2;
-			middle = num3;
+//--------------------------------------
+// askFraction
+//--------------------------------------
+fraction askFraction() {
+	fraction fractionVariable{};
+	cout << "Enter numerator: ";
+	cin >> fractionVariable.numerator;
+	do {
+		cout << "Enter denominator: ";
+		cin >> fractionVariable.denominator;
+		if (fractionVariable.denominator == 0) {
+			cout << "Denominator cannot be 0" << endl;
 		}
-	} else if (num3 > num1 && num3 > num2) {
-		largest = num3;
-		if (num2 < num1) {
-			smallest = num2;
-			middle = num1;
-		} else {
-			smallest = num1;
-			middle = num2;
+	} while (fractionVariable.denominator == 0);
+	return fractionVariable;
+}
+
+//--------------------------------------
+// calcDecimal
+//--------------------------------------
+void calcDecimal(fraction &fractionVariable) {
+	if (fractionVariable.denominator == 0) {
+		fractionVariable.decimalValue = 0.0;
+	}
+	else {
+		fractionVariable.decimalValue = (double)fractionVariable.numerator / fractionVariable.denominator;
+	}
+}
+//--------------------------------------
+// printFraction
+//--------------------------------------
+void printFraction(fraction fractionVariable) {
+	cout << fractionVariable.numerator << " / " << fractionVariable.denominator << " (" << fractionVariable.decimalValue << ")";
+}
+//--------------------------------------
+// askFractionList
+//--------------------------------------
+void askFractionList(fraction(&fractionList)[maxFractions], int &fractionListSize) {
+	do {
+		cout << "How many fractions in your list? ";
+		cin >> fractionListSize;
+		if (fractionListSize <= 0 || fractionListSize > 10) {
+			cout << "Enter a number between 1 and 10" << endl;
 		}
-	} else {
-		largest = num2;
-		if (num3 < num1) {
-			smallest = num3;
-			middle = num1;
-		} else {
-			smallest = num1;
-			middle = num3;
+	} while (fractionListSize <= 0 || fractionListSize > 10);
+	for (int i = 0; i < fractionListSize; i++) {
+		cout << "For fraction " << i + 1 << endl;
+		fractionList[i] = askFraction();
+		calcDecimal(fractionList[i]);
+	}
+}
+
+//--------------------------------------
+// printFractionList
+//--------------------------------------
+void printFractionList(fraction fractionList[], int fractionListSize) {
+	for (int i = 0; i < fractionListSize; i++) {
+		printFraction(fractionList[i]);
+		cout << endl;
+	}
+}
+
+//--------------------------------------
+// findMaxFraction
+//--------------------------------------
+int findMaxFraction(fraction fractionList[], int fractionListSize) {
+	if (fractionListSize == 0) {
+		return  -1;
+	}
+	double max = DBL_MIN;
+	int maxIndex = 0;
+	for (int index = 0; index < fractionListSize; index++) {
+		if (fractionList[index].decimalValue > max) {
+			maxIndex = index;
+			max = fractionList[index].decimalValue;
 		}
 	}
+	return maxIndex;
+}
 
-	cout << endl << smallest << " " << middle << " " << largest << endl;
+int main() {
+	int fractionListSize;
+	fraction fractionList[maxFractions] = {};
 
-	cout << "A. Aleppo Pepper " << endl;
-	cout << "B. Banana Pepper " << endl;
-	cout << "C. Cayenne Pepper " << endl;
-	cout << "D. Dragons Breath " << endl;
-	cout << "Enter a letter to choose a pepper:  ";
+	askFractionList(fractionList, fractionListSize);
+	printFractionList(fractionList, fractionListSize);
+	cout << "The highest value fraction is: ";
+	printFraction(fractionList[findMaxFraction(fractionList, fractionListSize)]);
 
-	char menuInput;
-	cin >> menuInput;
-	menuInput = tolower(menuInput);
-
-	int heat;
-	switch (menuInput) {
-		case 'a':
-			heat = 30000;
-			break;
-		case 'b':
-			heat = 1000;
-			break;
-		case 'c':
-			heat = 40000;
-			break;
-		case 'd':
-			heat = 2480000;
-			break;
-		default: 
-			heat = 0;
-	}
-
-	// check if pepper was on the list
-	if (heat == 0) {
-		cout << endl << "That pepper is not on the list";
-	} else {
-		cout << endl << "That's " << heat << " Scovilles of heat!";
-	}
-
-	// replaces system("pause") since this is Windows specific
-	cin.ignore();
+	//pause
 	cin.get();
-
+	cin.ignore();
 	return 0;
 }
