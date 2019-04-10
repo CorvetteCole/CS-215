@@ -12,13 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="763b70b5-ee2d-44cd-af65-d2e5e524db13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Project2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project2/gameutils.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project2/gameutils.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project2/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1/Project1/Project1.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/Project1/Project1.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab1/Project1/Project1.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1/Project1/Project1.vcxproj.filters" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lab2/Lab2/Source.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Lab2/Source.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab9/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../lab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -40,8 +34,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="59" />
+            <state relative-caret-position="119">
+              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -58,10 +52,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-7" />
-    <option name="width" value="1363" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1908" />
+    <option name="width" value="1944" />
+    <option name="height" value="2082" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -75,7 +69,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -109,18 +102,19 @@
       <option name="presentableId" value="Default" />
       <updated>1553112990635</updated>
       <workItem from="1553112992938" duration="3862000" />
-      <workItem from="1553464277690" duration="1223000" />
+      <workItem from="1554223463869" duration="599000" />
+      <workItem from="1554925765488" duration="622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5085000" />
+    <option name="totallyTimeSpent" value="5083000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="848" y="0" width="864" height="925" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12313433" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12623763" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -151,8 +145,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="59" />
+        <state relative-caret-position="119">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
