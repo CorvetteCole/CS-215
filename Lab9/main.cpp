@@ -1,3 +1,15 @@
+//--------------------------------------------------------------------
+// CS215-005 Lab 9
+//--------------------------------------------------------------------
+// Author: Cole Gerdemann
+// Date: April 10th 2019
+// Description: Implementation of a dynamic Stack class using
+//- Dynamic allocation and deallocation of nodes
+//- Push: inserting a new node on the top of a stack
+//- Pop: removing the top node of a stack
+//- Print: printing the current contents of a stack
+// --------------------------------------------------------------------
+
 #include <iostream>
 using namespace std;
 
@@ -39,10 +51,10 @@ public:
     };			// deallocate the top node and return the data that was in it.
     // print "Stack empty" and return 0 when the stack is empty.
     void print(){
-        cout << "STACK (top first): " << endl;
+        cout << "STACK (top first): ";
         node * tmp = top;
         for (;tmp; tmp = tmp -> next){
-            cout << tmp -> data << endl;
+            cout << tmp -> data << " ";
         }
 
     };		// print the data of all nodes, left to right, starting with the top.
