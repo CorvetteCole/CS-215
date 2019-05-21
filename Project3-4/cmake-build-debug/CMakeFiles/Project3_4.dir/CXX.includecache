@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/corve/Documents/GitHub/CS-215/Project3-4/game.h
+string
+-
+team.h
+C:/Users/corve/Documents/GitHub/CS-215/Project3-4/team.h
+
+C:/Users/corve/Documents/GitHub/CS-215/Project3-4/gameList.h
+game.h
+C:/Users/corve/Documents/GitHub/CS-215/Project3-4/game.h
+
+C:/Users/corve/Documents/GitHub/CS-215/Project3-4/league.cpp
+iostream
+-
+league.h
+C:/Users/corve/Documents/GitHub/CS-215/Project3-4/league.h
+
+C:/Users/corve/Documents/GitHub/CS-215/Project3-4/league.h
+teamList.h
+C:/Users/corve/Documents/GitHub/CS-215/Project3-4/teamList.h
+gameList.h
+C:/Users/corve/Documents/GitHub/CS-215/Project3-4/gameList.h
+
+C:/Users/corve/Documents/GitHub/CS-215/Project3-4/team.h
+string
+-
+
+C:/Users/corve/Documents/GitHub/CS-215/Project3-4/teamList.h
+team.h
+C:/Users/corve/Documents/GitHub/CS-215/Project3-4/team.h
+

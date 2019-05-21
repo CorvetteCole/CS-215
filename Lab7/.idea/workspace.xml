@@ -12,7 +12,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="763b70b5-ee2d-44cd-af65-d2e5e524db13" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lab9/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab9/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lab5/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project2/.idea/Project2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project3-4/game.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project3-4/game.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project3-4/gameList.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project3-4/gameList.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project3-4/league.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project3-4/league.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project3-4/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project3-4/team.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project3-4/team.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project3-4/teamList.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project3-4/teamList.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab2/Lab2/Lab2.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab2/Lab2/Lab2.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab9/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab9/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,6 +38,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
@@ -32,8 +53,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <state>
+              <caret selection-end-line="8" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -51,9 +72,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1908" />
-    <option name="width" value="1944" />
-    <option name="height" value="2082" />
+    <option name="x" value="1032" />
+    <option name="width" value="895" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -61,12 +82,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Lab7" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab7" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -102,16 +138,20 @@
       <workItem from="1553112992938" duration="3862000" />
       <workItem from="1554223463869" duration="599000" />
       <workItem from="1554925765488" duration="622000" />
+      <workItem from="1557968905494" duration="607000" />
+      <workItem from="1558036596657" duration="599000" />
+      <workItem from="1558389018089" duration="654000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5083000" />
+    <option name="totallyTimeSpent" value="6943000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="848" y="0" width="864" height="925" extended-state="0" />
+    <frame x="1032" y="0" width="895" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12623763" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16766468" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -142,8 +182,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state>
+          <caret selection-end-line="8" selection-end-column="71" />
         </state>
       </provider>
     </entry>
